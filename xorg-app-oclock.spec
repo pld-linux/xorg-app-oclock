@@ -1,5 +1,3 @@
-# $Rev: 3357 $, $Date: 2005-08-27 17:42:47 $
-#
 Summary:	oclock application
 Summary(pl):	Aplikacja oclock
 Name:		xorg-app-oclock
@@ -16,10 +14,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
-BuildRoot:	%{tmpdir}/oclock-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 oclock applications.
@@ -27,11 +22,9 @@ oclock applications.
 %description -l pl
 Aplikacja oclock.
 
-
 %prep
 %setup -q -n oclock-%{version}
 %patch0 -p1
-
 
 %build
 %{__aclocal}
@@ -42,17 +35,14 @@ Aplikacja oclock.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)

@@ -2,10 +2,10 @@ Summary:	oclock application
 Summary(pl):	Aplikacja oclock
 Name:		xorg-app-oclock
 Version:	1.0.1
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/oclock-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/oclock-%{version}.tar.bz2
 # Source0-md5:	91f49547f9ed3cd0137c8b7c3183e360
 Source1:	oclock.desktop
 Source2:	oclock.png
@@ -52,8 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/X11/app-defaults/*
+%attr(755,root,root) %{_bindir}/oclock
+%{_datadir}/X11/app-defaults/Clock-color
 %{_desktopdir}/oclock.desktop
 %{_pixmapsdir}/oclock.png
-%{_mandir}/man1/*.1x*
+%{_mandir}/man1/oclock.1x*

@@ -1,5 +1,5 @@
 Summary:	oclock application
-Summary(pl.UTF-8):   Aplikacja oclock
+Summary(pl.UTF-8):	Aplikacja oclock
 Name:		xorg-app-oclock
 Version:	1.0.1
 Release:	1

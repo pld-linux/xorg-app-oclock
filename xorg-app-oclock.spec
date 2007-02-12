@@ -1,5 +1,5 @@
 Summary:	oclock application
-Summary(pl):	Aplikacja oclock
+Summary(pl.UTF-8):   Aplikacja oclock
 Name:		xorg-app-oclock
 Version:	1.0.1
 Release:	1
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 oclock applications.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja oclock.
 
 %prep

@@ -1,5 +1,5 @@
-Summary:	oclock application
-Summary(pl.UTF-8):	Aplikacja oclock
+Summary:	oclock application - round X clock
+Summary(pl.UTF-8):	Aplikacja oclock - okrągły zegar dla X
 Name:		xorg-app-oclock
 Version:	1.0.1
 Release:	1
@@ -20,10 +20,10 @@ Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-oclock applications.
+oclock simply displays the current time on an analog display.
 
 %description -l pl.UTF-8
-Aplikacja oclock.
+oclock po prostu wyświetla aktualny czas na analogowym wyświetlaczu.
 
 %prep
 %setup -q -n oclock-%{version}

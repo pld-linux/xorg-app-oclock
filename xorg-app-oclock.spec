@@ -2,7 +2,7 @@ Summary:	oclock application - round X clock
 Summary(pl.UTF-8):	Aplikacja oclock - okrągły zegar dla X
 Name:		xorg-app-oclock
 Version:	1.0.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/oclock-%{version}.tar.bz2
@@ -58,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/Clock-color
 %{_desktopdir}/oclock.desktop
 %{_pixmapsdir}/oclock.png
-%{_mandir}/man1/oclock.1x*
+%{_mandir}/man1/oclock.1*

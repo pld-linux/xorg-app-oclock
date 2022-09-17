@@ -1,23 +1,25 @@
 Summary:	oclock application - round X clock
 Summary(pl.UTF-8):	Aplikacja oclock - okrągły zegar dla X
 Name:		xorg-app-oclock
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/releases/individual/app/oclock-%{version}.tar.bz2
-# Source0-md5:	973f6d25a6f0990720b98a15c9436b92
+Source0:	https://xorg.freedesktop.org/releases/individual/app/oclock-%{version}.tar.xz
+# Source0-md5:	b8a43e5d96fe23ff8712e7c4c6e8dcf3
 Source1:	oclock.desktop
 Source2:	oclock.png
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_bindir}/oclock
 %{_datadir}/X11/app-defaults/Clock-color
 %{_desktopdir}/oclock.desktop
